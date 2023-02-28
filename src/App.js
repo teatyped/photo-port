@@ -23,3 +23,5 @@ function App() {
 }
 
 export default App;
+
+// note app.js file is the "root" of the prooject
