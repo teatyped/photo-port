@@ -1,5 +1,6 @@
 import React from "react";
 
+// Nav arry of diffrents cats, will use maps to display on front
 function Nav() {
   const categorires = [
     {
@@ -20,6 +21,10 @@ function Nav() {
       decription: "Fields, farmhouses, waterfalls, and the beauty of nature",
     },
   ];
+
+function categorySelected (name){
+  console.log(`${name} clicked`)
+}
 
   return (
     <header>
@@ -43,7 +48,8 @@ function Nav() {
 
           {categorires.map((category) => (
             <li className="mx-1" key={category.name}>
-              <span>{category.name}</span>
+              <span onClick={() => categorySelected(category.name)}>
+                {category.name}</span>
             </li>
           ))}
         </ul>
